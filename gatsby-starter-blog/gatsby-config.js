@@ -15,7 +15,6 @@ module.exports = {
       summary: `who lives and works in San Francisco building useful things.`,
     },
     description: `Musings on the world and technology.`,
-    siteUrl: `geckods.eth`,
     social: {
       cphof: `geckods`,
       codeforces: `geckods`,

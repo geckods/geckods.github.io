@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import NavBar from '../components/NavBar'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -12,19 +13,20 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Bio />
+        <NavBar />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
           gatsby-config.js).
         </p>
+        <Bio className="bio-spacing"/>
       </Layout>
     )
   }
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Bio />
+      <NavBar />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -44,21 +46,14 @@ const BlogIndex = ({ data, location }) => {
                     </Link>
                   </h2>
                 </header>
-                {/*
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-                */}
               </article>
             </li>
           )
         })}
       </ol>
+      <div className="bio-spacing">
+        <Bio />
+      </div>
     </Layout>
   )
 }
@@ -80,8 +75,8 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-    sort: { frontmatter: { date: DESC } }
-    filter: { frontmatter: { is_demo: { ne: true } } } # This is the key change
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { is_demo: { ne: true } } }
     ) {
       nodes {
         excerpt
