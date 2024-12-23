@@ -12,7 +12,7 @@ module.exports = {
     title: `geckods' blog`,
     author: {
       name: `Abhinav Ramachandran`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: `who lives in San Francisco thinking about things.`,
     },
     description: `Musings on the world and technology.`,
     social: {
