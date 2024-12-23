@@ -300,6 +300,23 @@ a:focus {
   border-radius: 100%;
 }
 
+.bio-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Adjust as needed */
+}
+
+.bio-icons a {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.separator {
+  color: grey;
+  margin-right: 10px; /* Adjust as needed */
+}
+
 .blog-post header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
 }
