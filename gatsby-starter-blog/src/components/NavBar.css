@@ -1,17 +1,16 @@
 .nav-bar {
-  background-color: #f0f0f0;
-  padding: 10px 0;
   border-top: 2px solid #ccc;
   border-bottom: 2px solid #ccc;
+  padding: 10px 0;
 }
 
 .nav-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 10px; /* Adjust the gap as needed */
   max-width: 800px; /* Adjust this value to match the width of your page content */
   margin: 0 auto;
-  gap: 20px;
 }
 
 .nav-container a {
@@ -19,6 +18,10 @@
   color: #333;
   font-weight: bold;
   white-space: nowrap; /* Ensure no individual click target is on two lines */
+}
+
+.nav-container .separator {
+  color: grey;
 }
 
 .nav-container a:hover {
