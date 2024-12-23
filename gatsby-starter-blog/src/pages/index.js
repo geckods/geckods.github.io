@@ -76,7 +76,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { is_demo: { ne: true } } }
+      filter: { frontmatter: { is_demo: { ne: true } }, fileAbsolutePath: { regex: "/content/blog/" } }
     ) {
       nodes {
         excerpt
