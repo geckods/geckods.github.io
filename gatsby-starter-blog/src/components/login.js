@@ -1,8 +1,8 @@
-import React from "react"
+import React, { Component } from "react"
 import { navigate } from "gatsby"
 import { handleLogin, isLoggedIn } from "../services/auth"
 
-class Login extends React.Component {
+class Login extends Component {
   state = {
     username: ``,
     password: ``,
@@ -25,7 +25,7 @@ class Login extends React.Component {
     }
 
     return (
-      <>
+      <div className="login-container">
         <h1>Log in</h1>
         <form
           method="post"
@@ -38,6 +38,7 @@ class Login extends React.Component {
             Username
             <input type="text" name="username" onChange={this.handleUpdate} />
           </label>
+          <br />
           <label>
             Password
             <input
@@ -46,9 +47,10 @@ class Login extends React.Component {
               onChange={this.handleUpdate}
             />
           </label>
+          <br />
           <input type="submit" value="Log In" />
         </form>
-      </>
+      </div>
     )
   }
 }
