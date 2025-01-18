@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "gh-pages": "^6.2.0"
+  },
+  "dependencies": {
+    "@auth0/auth0-react": "^2.2.4"
   }
 }
